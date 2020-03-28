@@ -1,0 +1,143 @@
+/*#region Global Settings */
+* {
+  padding: 0%;
+  margin: 0%;
+}
+body {
+  background-color: black;
+  background-image: url("1.jpg");
+}
+
+/*#endregion */
+
+/* #region Moon Settings */
+#divMoon {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  top: 200px;
+  left: 250px;
+  border-radius: 50%;
+  animation-name: transMoon;
+  animation-duration: 20000ms;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  background: radial-gradient(circle at 100px 100px, white, #000);
+}
+@keyframes transMoon {
+  0% {
+    transform: translate(0px);
+
+    top: 200px;
+    left: 250px;
+
+    width: 295px;
+    height: 295px;
+
+    background: radial-gradient(circle at 200px 100px, white, #000);
+  }
+
+  25% {
+    z-index: -1;
+
+    top: 150px;
+    left: 250px;
+
+    width: 250px;
+    height: 250px;
+
+    background: radial-gradient(circle at 100px 100px, white, #000);
+  }
+
+  50% {
+    transform: translate(1000px);
+
+    z-index: 0;
+
+    top: 200px;
+    left: 250px;
+
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle at 100px 100px, white, #000);
+  }
+
+
+  75% {
+    z-index: 0;
+
+    top: 200px;
+    left: 250px;
+
+    width: 300px;
+    height: 300px;
+
+
+
+  }
+
+  100% {
+    z-index: 0;
+
+    top: 200px;
+    left: 250px;
+
+    width: 290px;
+    height: 290px;
+
+    background: radial-gradient(circle at 200px 100px, white, #000);
+  }
+}
+/* #endregion */
+
+/*#region Sun Settings */
+#divSun {
+  background: radial-gradient(circle at 80px 100px, yellow, rgb(179, 92, 22));
+  width: 310px;
+  height: 310px;
+  border: rgb(179, 92, 22) 2px solid;
+  position: absolute;
+  top: 200px;
+  left: 780px;
+  border-radius: 50%;
+  z-index: 1;
+  animation-name: transSun;
+  animation-duration: 20000ms;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  box-shadow: 10px 10px 550px yellow;
+}
+@keyframes transSun {
+  0% {
+    z-index: 0;
+  }
+
+  25% {
+    z-index: 0;
+  }
+
+  45% {
+    box-shadow: 10px 10px 5000px yellow;
+  }
+  48% {
+    z-index: -1;
+    box-shadow: 10px 10px 5000px yellow;
+  }
+
+  50% {
+    z-index: -1;
+    box-shadow: 10px 10px 5000px red;
+    rotate: 45%;
+  }
+
+  75% {
+    z-index: -1;
+  }
+
+  65% {
+  }
+  100% {
+    z-index: 0;
+  }
+}
+/*#endregion */
